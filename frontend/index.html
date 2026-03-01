@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="assets/styles.css?v=1.1">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet"> <!-- Exemplo com Lora -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#sobre">MEU<br>PORTIFÓLIO</a></li> 
+                <li><a href="#sobre">Sobre Mim</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#experiencia">Experiência</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<!--Sobre mim-->
+
+<div class="perfil" id="sobre">
+    <div class="foto-perfil">
+        <img src="assets/images/foto_portifolio.jpeg" alt="Foto de Perfil">
+    </div>
+    <div class="informacoes">
+        <h1>Graziele Rodrigues da Silva</h1>
+        <p class="subtitulo">Engenharia Biomédica aplicada à alta performance humana.</p>
+
+        <div class="container">
+            <div class="educacao">
+                <h3>EDUCAÇÃO</h3>
+                <ul class="lista-educacao">
+                    <li>Centro de Educação em Saúde Abram Szaijman
+                        <ul class="subitens">
+                            <li>2020 - 2022</li>
+                            <li>Ensino Médio Integrado ao Técnico de Enfermagem</li>
+                        </ul>
+                    </li>
+                    <li>Faculdade Israelita de Ciências da Saúde Albert Einstein
+                        <ul class="subitens">
+                            <li>2023 - 2027 (em andamento)</li>
+                            <li>Graduação em Engenharia Biomédica</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Segunda coluna para ÁREAS DE ATUAÇÃO + IDIOMAS (dentro da mesma div) -->
+            <div class="second-column">
+                 <!-- ÁREAS DE ATUAÇÃO -->
+                <div class="areas-de-atuacao">
+                    <h3>ÁREAS DE ATUAÇÃO</h3>
+                    <ul>
+                        <li>Biomecânica</li>
+                        <li>Processamento de sinais</li>
+                        <li>Neurociência aplicada ao desempenho esportivo</li>
+                     </ul>
+                 </div>
+
+                <!-- IDIOMAS -->
+                <div class="idiomas">
+                     <h3>IDIOMAS</h3>
+                     <ul>
+                        <li>Inglês - Avançado</li>
+                        <li>Español - Básico</li>
+                        <li>Italiano - Iniciante</li>
+                     </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>     
+
+<!--PROJETOS-->
+<section id="projetos" class="projetos-section projetos">
+  <h2>PROJETOS</h2>
+    <div class="projetos-container">
+        <div class="projeto_1">
+            <img src="assets/images/ic.png" alt="Projeto 1">
+            <div class="descricao">
+                <h3>Análise do Controle Neuromuscular em Instabilidade Crônica de Tornozelo</h3>
+                <p>Estudo voltado à caracterização de padrões de ativação muscular em indivíduos com instabilidade crônica de tornozelo, por meio do processamento e análise de sinais eletromiográficos (EMG).</p>
+            </div>
+        </div>
+        <div class="projeto_2">
+            <img src="assets/images/code.png" alt="Projeto 2">
+            <div class="descricao">
+                <h3>Desenvolvimento de Jogo Educacional em Saúde Bucal</h3>
+                <p>Desenvolvimento de um jogo interativo voltado à educação em saúde bucal infantil, integrando lógica de programação, design de interação e princípios de aprendizagem aplicada à saúde.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--EXPERIÊNCIA-->
+<section id="experiencia" class="experiencia">
+  <h2 class="titulo-experiencia">EXPERIÊNCIA</h2>
+
+  <!-- radios (ficam escondidos) -->
+  <input type="radio" name="exp" id="exp1" class="exp-radio" checked>
+  <input type="radio" name="exp" id="exp2" class="exp-radio">
+
+  <!-- "botões" + "caixas" dentro do mesmo grid -->
+  <div class="exp-grid">
+
+    <!-- botões -->
+    <div class="exp-botoes">
+      <label for="exp1" class="exp-botao">
+        <span class="btn-text"><strong>Aluna Pesquisadora - Iniciação Científica</strong></span>
+      </label>
+
+      <label for="exp2" class="exp-botao">
+        <span class="btn-text"><strong>Membro da Equipe de Projetos e Marketing - HJE</strong></span>
+      </label>
+    </div>
+
+    <!-- caixas de texto -->
+    <div class="exp-conteudos">
+      <div class="exp-box exp1">
+        <p class="exp-p">Faculdade Israelita de Ciências da Saúde Albert Einstein (FICSAE) | 2024 – Atual</p>
+        <p class="exp-p">Atuação em pesquisa aplicada à biomecânica do movimento humano, com foco no estudo do controle motor e em aplicações voltadas à reabilitação. Colaboração no processamento e análise de sinais eletromiográficos (EMG), organização e tratamento de dados experimentais e interpretação de padrões de ativação muscular.</p>
+        <p class="exp-p">Participação em atividades laboratoriais, incluindo acompanhamento de protocolos experimentais, apoio em coletas e discussão técnica de resultados sob perspectiva biomecânica.
+        </p>
+      </div>
+
+      <div class="exp-box exp2">
+        <p class="exp-p">HealthTech Júnior Einstein | 2025 – Atual</p>
+        <p class="exp-p">Atuação nas equipes de Projetos e Marketing da entidade acadêmica HealthTech Júnior Einstein, colaborando no desenvolvimento, estruturação e divulgação de iniciativas voltadas à aplicação de tecnologia e programação com foco em inovação e impacto social.</p>
+        <p class="exp-p">Participação no planejamento de ações estratégicas, organização de entregas e produção de materiais institucionais e de comunicação.</p>
+      </div>
+    </div>
+  </div>
+  <div class="exp-separador"></div> <!--Linha pontilhada-->
+  <!-- SKILLS (continuação da seção EXPERIÊNCIA) -->
+  <div class="skills">
+    <h2 class="titulo-skills">SKILLS</h2>
+
+    <div class="skills-grid">
+        <!-- Hard Skills -->
+        <div class="skills-col">
+            <div class="skills-title hard">Hard Skills</div>
+            <div class="skills-list">
+                <div class="skill-card">Processamento de sinais EMG</div>
+                <div class="skill-card">Análise Biomecânica do Movimento Humano</div>
+                <div class="skill-card">MATLAB - Intermediário<br>Python - Intermediário</div>
+            </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="skills-col">
+            <div class="skills-title soft">Soft Skills</div>
+
+            <div class="skills-list">
+                <div class="skill-card">Pensamento Analítico</div>
+                <div class="skill-card">Trabalho em equipe</div>
+                <div class="skill-card">Formulação Estratégica de Soluções</div>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!--CONTATO-->
+<section class="contatos" id="contato">
+  <div class="contatos-topo">
+    <div class="contatos-texto">
+      <h2>CONTATOS</h2>
+
+      <div class="contatos-item">
+        <span class="contatos-label">GitHub</span>
+        <span class="contatos-valor">Grazii03</span>
+      </div>
+
+      <div class="contatos-item">
+        <span class="contatos-label">Linkedin</span>
+        <span class="contatos-valor">Graziele Rodrigues</span>
+      </div>
+
+      <div class="contatos-item">
+        <span class="contatos-label">Email</span>
+        <span class="contatos-valor">grazielerodrigues2005@gmail.com</span>
+      </div>
+    </div>
+
+    <div class="contatos-estrelas" aria-hidden="true">
+      <span class="estrela estrela-vinho">✦</span>
+      <span class="estrela estrela-azul">★</span>
+    </div>
+  </div>
+
+  <div class="contatos-faixa">
+    <span class="contatos-assinatura">Graziele</span>
+  </div>
+</section>
+
+<script>
+async function loadSkills(){
+  const res = await fetch("/api/skills");
+  const data = await res.json();
+
+  const cols = document.querySelectorAll(".skills-col");        // ✅ com s
+  const hardList = cols[0].querySelector(".skills-list");       // ✅ com s
+  const softList = cols[1].querySelector(".skills-list");       // ✅ com s
+
+  hardList.innerHTML = data.hard.map(s => `<div class="skill-card">${s}</div>`).join(""); // ✅ com s
+  softList.innerHTML = data.soft.map(s => `<div class="skill-card">${s}</div>`).join(""); // ✅ com s
+}
+loadSkills();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,750 @@
+/* Garante que o conteúdo ocupe toda a altura da tela */
+html, body {
+    height: 100%; /* Define que a altura é 100% da janela do navegador */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Impede a rolagem horizontal */
+}
+
+/* Contêiner principal */
+.main-content {
+    min-height: 100vh; /* Garantir que o conteúdo seja suficientemente alto para rolar */
+    padding: 20px;
+}
+
+/* Se você quiser forçar uma rolagem sempre visível */
+body {
+    overflow-y: scroll; /* Garante que a barra de rolagem esteja visível */
+}
+
+
+/* Estilo para o header (topo da página) */
+header {
+    background-color: #9fb2ac; /* Cor de fundo suave */
+    color: #5d0d18; /* Cor para o texto */
+    text-align: center;
+    padding: 30px 0 ;
+    width: 100%; /* Garante que o header ocupe 100% da largura */
+    margin: 0;
+}
+
+/* Barra de navegação */
+nav ul {
+    display: flex;
+    justify-content: space-evenly; /* Alinha os itens horizontalmente no centro */
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px; /* Espaço abaixo da barra de navegação */
+    margin: 0;
+    width: 100%;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px; /* Espaçamento entre os itens */
+}
+
+nav ul li:not(:first-child) {  /*textos das seções*/
+    font-size: 1.4em;
+}
+
+/* Estilo para o "MEU PORTFÓLIO" */
+nav ul li:first-child a {
+    font-family: 'Lora', serif; /* Aplica a fonte Lora ao "MEU PORTFÓLIO" */
+    font-size: 2.5em; /* Tamanho maior para o título "MEU PORTFÓLIO" */
+    font-weight: bold; /* Título em negrito */
+    letter-spacing: 2px; /* Espaçamento entre as letras */
+    color: #5d0d18; /* Cor dos links */
+    border-bottom: none;
+    border-top: none;
+    text-align: left;
+    display: inline-block;
+    line-height: 1.1; /* Ajuste do espaçamento entre as linhas para garantir o alinhamento */
+    margin-left: -90px; /* Remove o espaçamento à esquerda do "MEU PORTFÓLIO" */
+}
+
+nav ul li a { 
+    font-family: 'Lora', serif; /* Aplica a fonte Lora aos títulos das seções */
+    text-decoration: none;
+    color: #5d0d18; /* Cor dos links */
+    font-weight: bold;
+    border-bottom: 1px solid #5d0d18; /* Adiciona a barrinha (linha) abaixo do título */
+    border-top: 1px solid #5d0d18; /* Linha acima do título */
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-transform: uppercase; /* Deixa o título em maiúsculas */
+    width: 150%; /* Aumenta o comprimento das linhas */
+    display: inline-block; /* Faz com que o conteúdo ocupe mais largura */
+}
+
+/*Sobre mim*/
+/* Layout geral para a estrutura */
+.container {
+    display: flex;
+    justify-content: space-between; /* Isso separa as colunas */
+    gap: 120px; /* Espaço entre as colunas */
+}
+
+/* Estilo para as colunas dentro do container */
+.educacao {
+    flex: 2; /* Isso faz com que a educação ocupe o espaço disponível */
+    margin-left: 50px; /* Ajuste conforme necessário */
+    width: 100%; 
+    position: relative; /* Faz com que possamos mover a linha sem afetar o conteúdo */
+}
+
+.educacao::after {
+    content: ""; /* Cria um elemento vazio */
+    position: absolute; /* Permite mover a linha sem afetar o texto */
+    top: 0;
+    right: -80px; /* Posiciona a linha à direita do elemento */
+    height: 100%; /* A linha ocupará a altura da coluna */
+    border-right: 2px dotted rgba(255, 249, 235, 0.2); /* Linha pontilhada */
+    left: 150px; /* Ajusta a linha para a direita, sem mexer no texto */
+}
+
+.second-column {
+    flex: 2; /* Isso faz com que as Áreas de Atuação e Idiomas ocupem o restante do espaço */
+    width: 100%;
+}
+
+/* Adiciona uma linha pontilhada abaixo da seção ÁREAS DE ATUAÇÃO */
+.areas-de-atuacao {
+    border-bottom: 2px dotted rgba(255, 249, 235, 0.2); /* Linha pontilhada */
+    padding-bottom: 20px; /* Espaçamento abaixo da linha */
+    width: 150%;
+}
+
+.areas-de-atuacao ul li {
+    font-family: 'Host Grotesk', serif;
+    font-size: 1.2em;
+    letter-spacing: -0.05em;
+    width: 150%;
+}
+
+.idiomas ul li{
+    font-family: 'Host Grotesk', serif;
+    font-size: 1.2em;
+    letter-spacing: -0.05em;
+}
+
+/* Estilo para o "MEU PORTFÓLIO" */
+.perfil {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 40px;
+    background-color: #5d0d18;
+    color:#fff9eb ;
+}
+
+.foto-perfil img {
+    border-radius: 60%;
+    width: 410px;
+    height: 500px;
+    object-fit: cover;
+    margin-right: 30px;
+    margin-top: 50px;
+}
+
+.informacoes {
+    max-width: 700px;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-family: 'Anton', serif;
+    font-weight: normal;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+    margin-left: 50px;
+}
+
+.subtitulo {
+    font-size: 1em;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    font-family: 'Host Grotesk', serif;
+    line-height: 1.5;
+    margin-left: 50px;
+}
+
+h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    font-family: 'Anton', serif;
+    font-weight: normal;
+    width: 150%;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #fff9eb;
+}
+
+/* Estilo para a lista de educação */
+.lista-educacao {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: center;
+    margin-top: 10px;
+    width: 110%;
+}
+
+.lista-educacao li {
+    font-weight: bold;
+    font-size: 1.2em;
+    font-family: 'Host Grotesk', serif;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    letter-spacing: -0.05em;
+    width: 100%;
+}
+
+.subitens {
+    margin-top: 10px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.subitens li {
+    font-weight: normal;
+    font-size: 0.8em;
+    margin-top: 0;
+    text-align: left;
+}
+
+/*PROJETOS*/
+/* Estilo da seção de Projetos */
+.projetos {
+    background-color: #1f3a4a; /* Cor de fundo azul */
+    color: #fff9eb; /* Cor do texto */
+    padding: 40px 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Título da seção */
+.projetos h2 {
+    background-color: #9fb2ac; /* Cor de fundo verde-acinzentado */
+    color: #1f3a4a; /* Cor do texto (escura) */
+    padding: 10px 30px; /* Espaçamento interno do botão */
+    border-radius: 30px; /* Bordas arredondadas */
+    display: inline-block; /* Faz com que o título se comporte como um botão */
+    text-transform: uppercase; /* Deixa o texto em maiúsculas */
+    font-weight: bold; /* Deixa o texto em negrito */
+    font-size: 2.5em;
+    font-family: 'Anton', serif;
+    margin-bottom: 50px;
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Container de projetos */
+.projetos-container {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    flex-wrap: wrap; /* Permite que os projetos quebrem para a linha seguinte se necessário */
+}
+
+.projeto_1, .projeto_2 {
+    width: 45%; /* Cada projeto ocupa 45% da largura do container */
+    box-sizing: border-box; /* Garante que o padding não quebre o layout */
+    display: flex; /* Alinha o conteúdo dentro do projeto */
+    flex-direction: column; /* Organiza os itens (imagem + texto) em coluna */
+    justify-content: center; /* Garante que o conteúdo fique alinhado no topo */
+    align-items: center; /* Alinha os itens à esquerda */
+    text-align: left; /* Alinha o texto à esquerda */
+    margin-bottom: 30px; /* Espaçamento abaixo de cada projeto */
+    padding-left: 20px; /* Adiciona um pequeno preenchimento à esquerda para o texto */
+    padding-right: 20px; /* Adiciona um pequeno preenchimento à direita para o texto */
+}
+
+/* Estilo de cada projeto */
+.projeto {
+    background-color: #005f73;
+    padding: 20px;
+    border-radius: 8px;
+    width: 45%; /* Ajuste a largura das colunas */
+    box-sizing: border-box;
+}
+
+/* Estilo da imagem do Projeto 1 */
+.projeto_1 img {
+    max-width: 55%; /* Controla a largura da imagem do Projeto 1 */
+    border-radius: 15px; /* Bordas arredondadas para a imagem do Projeto 1 */
+    margin-bottom: 20px; /* Espaçamento inferior da imagem do Projeto 1 */
+    margin-right: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* Estilo da imagem do Projeto 2 */
+.projeto_2 img {
+    max-width: 50%; /* Controla a largura da imagem do Projeto 2 */
+    border-radius: 10px; /* Bordas arredondadas para a imagem do Projeto 2 */
+    margin-bottom: 30px; /* Espaçamento inferior da imagem do Projeto 2 */
+    margin-left: -10px;
+    margin-right: 70px;
+    height: auto; /* Mantém a proporção da imagem */
+    width: 100%; 
+    max-height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* Descrição do projeto */
+.descricao {
+    width: 70%; /* A descrição ocupa o mesmo tamanho da imagem */
+    max-width: 100%; /* Garante que a largura máxima da descrição seja igual à da imagem */
+    text-align: left; /* Alinha o texto à esquerda */
+    margin-left: 120px; /* Ajuste conforme necessário para mover a descrição para a direita */
+}
+
+.descricao h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #fff9eb; /* Cor do título */
+    font-weight: normal;
+    width: 69%;
+}
+
+.descricao p {
+    font-size: 1em;
+    line-height: 1.6; /* Melhor legibilidade */
+    color: #fff9eb; /* Cor da descrição */
+    font-family: 'Host Grotesk', serif;
+    width: 73%;
+}
+
+/*EXPERIÊNCIA*/
+/* =========================
+   EXPERIÊNCIA (SEÇÃO)
+   ========================= */
+
+.experiencia {
+  background-color: #fff9eb;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.experiencia h2{
+  background-color: #9fb2ac;
+  color: #1f3a4a;
+  padding: 10px 30px;
+  border-radius: 30px;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2.5em;
+  font-family: 'Anton', serif;
+  margin: 20px 0 50px;
+  text-align: center;
+}
+
+/* Esconde os radios */
+.exp-radio{
+  display: none;
+}
+
+/*GRID*/
+
+.exp-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: start;
+  max-width: 1400px;     /* opcional: limita largura do bloco todo */
+  margin: 0 auto;        /* centraliza o bloco dentro da seção */
+}
+
+/* Faz labels e caixas virarem itens diretos do grid */
+.exp-botoes,
+.exp-conteudos{
+  display: contents;
+}
+
+/*BOTÕES (BALÕES)*/
+
+.exp-botao{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 16px 22px;
+  padding-left: 28px;
+  border-radius: 22px;
+  cursor: pointer;
+  user-select: none;
+  background: #9fb2ac;
+  border: 2px solid #5d0d18;
+}
+
+/* texto dentro do botão */
+.exp-botao .btn-text{
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  font-family: 'Host Grotesk', serif;
+  font-size: 1.2em;
+  text-align: left;
+  line-height: 1.15;
+}
+
+/* Estilo do botão selecionado */
+#exp1:checked ~ .exp-grid label[for="exp1"],
+#exp2:checked ~ .exp-grid label[for="exp2"]{
+  outline: 3px solid rgba(107, 15, 26, 0.35);
+  transform: translateY(-1px);
+}
+
+/*CAIXAS DE DESCRIÇÃO*/
+
+.exp-box{
+  background: #9fb2ab;
+  border-radius: 26px;
+  padding: 28px;
+  min-height: 320px;
+  display: none; /* começa escondida */
+}
+
+/* texto da descrição */
+.exp-box p{
+  margin: 0;
+  width: 100%;
+  font-family: 'Host Grotesk', serif;
+  font-size: 1.2em;
+  text-align: left;
+  line-height: 1.5;
+  white-space: pre-line; /* respeita quebras de linha do seu <p> */
+}
+
+.exp-box .exp-p{
+  margin: 0 0 20px 0;  /* espaço entre parágrafos */
+}
+
+.exp-box .exp-p:last-child{
+  margin-bottom: 25px;
+}
+
+/* Cada caixa aparece embaixo do botão correspondente */
+.exp-box.exp1{ grid-column: 1; }
+.exp-box.exp2{ grid-column: 2; }
+
+/* Mostra só a caixa do selecionado */
+#exp1:checked ~ .exp-grid .exp-box.exp1{ display: block; }
+#exp2:checked ~ .exp-grid .exp-box.exp2{ display: block; }
+
+.exp-separador{
+  border-top: 2px dotted rgba(93, 13, 24, 0.55); /* pontilhado vinho */
+  width: min(1500px, 96%);  /* mesmo “miolo” do conteúdo */
+  margin: 60px auto;        /* espaço acima e abaixo */
+}
+
+/* =========================
+   SKILLS (continuação de EXPERIÊNCIA)
+   ========================= */
+
+.skills{
+  margin-top: 90px;       /* espaço após a parte de experiência */
+}
+
+.titulo-skills{
+  background-color: #9fb2ac;
+  color: #1f3a4a;
+  padding: 10px 30px;
+  border-radius: 30px;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2.3em;
+  font-family: 'Anton', serif;
+  margin: 0 auto 50px;
+}
+
+/* duas colunas: hard / soft */
+.skills-grid{
+  width: min(1500px, 96%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* título lateral (Hard/Soft) + “setas” fake com linha */
+.skills-col{
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* bloco do título (Hard/Soft) */
+.skills-title{
+  color: #fff9eb;
+  font-family: 'Host Grotesk', serif;
+  font-weight: 800;
+  font-size: 1.6em;
+  padding: 22px 26px;
+  border-radius: 18px;
+  text-align: center;
+  position: relative;
+}
+
+/* linha que sai do título e encosta no tronco */
+.skills-title::after{
+  content:"";
+  position:absolute;
+
+  /* meio do título */
+  top: 50%;
+  transform: translateY(-50%);
+
+  /* começa na direita do título */
+  left: calc(100%);
+  width: 100px;       /* comprimento da linha (ajuste) */
+  height: 4px;
+  background: var(--line);
+  border-radius: 999px;
+}
+
+/* cores */
+.skills-title.hard{ background: #1f3a4a; }
+.skills-title.soft{ background: #5d0d18; }
+
+/* define a cor da linha por coluna */
+.skills-col:has(.skills-title.hard){ --line: #1f3a4a; } /* azul */
+.skills-col:has(.skills-title.soft){ --line: #5d0d18; } /* vinho */
+
+/* lista dos cards de skills */
+.skills-list{
+  display: grid;
+  grid-template-rows: repeat(3, 110px);
+  gap: 28px;
+  position: relative;
+  /* mais espaço pra caber o “L” */
+  padding-left: 52px;
+}
+
+/* “linha” vertical que lembra seu diagrama */
+.skills-list::before{
+  content:"";
+  position:absolute;
+  left: 18px;
+  top: 50px;
+  bottom: 60px;
+  width: 4px;
+  background: var(--line);
+  border-radius: 999px;
+}
+
+/* card individual */
+.skill-card{
+  background: #9fb2ac;
+  border-radius: 22px;
+  padding: 26px 30px;
+  font-family: 'Host Grotesk', serif;
+  font-size: 1.15em;
+  font-weight: 700;
+  color: #1f3a4a;
+  text-align: center;
+  position: relative;
+  --elbowH: 22px;
+  white-space: pre-line;
+}
+
+/* “conectores” horizontais até a linha */
+.skill-card::before{
+  content:"";
+  position:absolute;
+
+  /* parte horizontal até o card */
+  left: -34px;
+  top: 50%;
+  width: 34px;
+
+  /* altura do “cotovelo” (top/bottom vão ajustar depois) */
+  height: var(--elbowH);
+
+  transform: translateY(-50%);
+
+  border-left: 4px solid var(--line);
+  border-top: 4px solid var(--line);
+  border-top-left-radius: 14px;
+}
+
+/* pontinha da seta */
+.skill-card::after{
+  content:"";
+  position:absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 9px solid var(--line);
+}
+
+/* 1º card: seta sobe metade do cotovelo */
+.skills-list .skill-card:nth-child(1)::after{
+  top: calc(50% - (var(--elbowH) / 2));
+}
+
+/* card do meio: só linha reta */
+.skills-list .skill-card:nth-child(2)::before{
+  height: 0;
+  border-left: none;
+  border-top-left-radius: 0;
+  top: 50%;
+}
+
+/* card de baixo: cotovelo pra baixo */
+.skills-list .skill-card:nth-child(3)::before{
+  border-top: none;
+  border-bottom: 4px solid var(--line);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 14px;
+  top: calc(50% + (var(--elbowH) / 2) - 22px) !important;
+}
+
+/* Responsivo (celular) */
+@media (max-width: 900px){
+  .skills-grid{
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .skills-col{
+    grid-template-columns: 1fr;
+  }
+  .skills-list{
+    padding-left: 0;
+  }
+  .skills-list::before,
+  .skill-card::before{
+    display:none;
+  }
+}
+
+/* CONTATO */
+/* =========================
+   CONTATOS
+   ========================= */
+
+.contatos{
+  width: 100%;
+  margin-top: 0; /* ajuste se quiser mais/menos espaço após experiência */
+}
+
+/* bloco verde */
+.contatos-topo{
+  background: #9fb2ac;
+  padding: 70px 8%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.contatos-texto h2{
+  margin: 0 0 22px;
+  font-family: 'Anton', serif;
+  font-size: 3em;
+  letter-spacing: 1px;
+  color: #1f3a4a;
+  text-transform: uppercase;
+}
+
+.contatos-item{
+  margin: 12px 0;
+  font-family: 'Host Grotesk', serif;
+  color: #1f3a4a;
+}
+
+.contatos-label{
+  display: block;
+  font-weight: 800;
+  font-size: 1.5em;
+  margin-bottom: 2px;
+}
+
+.contatos-valor{
+  display: block;
+  font-weight: 500;
+  font-size: 1.2em;
+  opacity: 0.95;
+}
+
+/* estrelas à direita */
+.contatos-estrelas{
+  position: relative;
+  min-width: 110px;
+  height: 90px;
+}
+
+.estrela{
+  position: absolute;
+  font-size: 64px;
+  line-height: 1;
+}
+
+.estrela-vinho{
+  color: #5d0d18;
+  right: 0;
+  top: 0;
+  font-size: 80px;
+}
+
+.estrela-azul{
+  color: #1f3a4a;
+  right: -10px;
+  top: 46px;
+  font-size: 60px;
+}
+
+/* faixa vinho */
+.contatos-faixa{
+  background: #5d0d18;
+  height: 220px; /* ajuste a altura da faixa */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* “Graziele” bem suave */
+.contatos-assinatura{
+  font-family: 'Kaushan Script', cursive; /* se você não tiver, troco por outra */
+  font-size: 300px;
+  color: rgba(255, 249, 235, 0.005);
+  transform: rotate(-2deg);
+  user-select: none;
+  white-space: nowrap;
+  width: 400%;
+  text-align: center;
+  transform: scaleX(1.12) scaleY(0.88);
+}
+
+/* responsivo */
+@media (max-width: 900px){
+  .contatos-topo{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .contatos-estrelas{
+    align-self: flex-end;
+  }
+  .contatos-assinatura{
+    font-size: 110px;
+  }
+}
